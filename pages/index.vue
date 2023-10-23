@@ -20,7 +20,7 @@
         <p>
           Hello my name is Chotiwut. I passionate in technology field focusing
           in Front-End Web Developer with 17 months experience. Familiar and
-          having knowledge with Vue.js, Tailwind.css, Bootstrap, proficiency
+          having knowledge with Vue.js, Nuxt.js, Tailwind.css, Bootstrap, proficiency
           with HTML, CSS, Javascript, and Have eagerness and curiosity to learn
           new things.
         </p>
@@ -43,7 +43,7 @@
         >
       </div>
     </div>
-    <div
+    <!-- <div
       class="index__skill mb-8 p-8 w-full md:h-[260px] h-[320px] bg-[#171f3e] border-2 border-[#00c9b2] rounded-3xl flex flex-col"
     >
       <p class="text-center text-2xl">Skills</p>
@@ -57,15 +57,15 @@
           <p class="text-center text-[11px] md:text-[16px] duration-300">
             {{ item.skill }}
           </p>
-          <!-- <div class="w-full h-[10px] bg-[#1f1f1f] rounded-md">
+          <div class="w-full h-[10px] bg-[#1f1f1f] rounded-md">
             <div
               class="h-[10px] bg-[#fff] rounded-md"
               :style="{ width: item.percentage + '%' }"
             ></div>
-          </div> -->
+          </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="index__experience mb-8 p-2 w-full grid gap-10">
       <p class="text-center text-2xl">Experience</p>
       <div class="index__experience-1" v-for="item in Experience" key="index">
