@@ -1,5 +1,5 @@
 <template>
-  <div class="page index px-11 md:px-48 xl:px-72 text-[#fff] scroll-auto">
+  <div class="page index px-11 md:px-48 xl:px-72 text-[#fff] scroll-auto antialiased">
     <div
       class="index__profile p-8 w-full h-screen rounded-3xl flex flex-col grid content-center md:gap-8 gap-4"
     >
@@ -29,13 +29,13 @@
         class="flex flex-col md:flex-row md:justify-start justify-center gap-2"
       >
         <a
-          class="w-full md:w-[120px] h-[40px] flex justify-center grid content-center rounded-xl bg-[#171f3e]"
+          class="w-full md:w-[120px] h-[40px] flex justify-center grid content-center rounded-xl bg-[#171f3e] border-2 hover:bg-transparent border-transparent hover:border-[#00c9b2] duration-300 ease-in-out"
           target="_blank"
           href="https://www.linkedin.com/in/chotiwut-74a335184/"
           >LinkedIn</a
         >
         <a
-          class="w-full md:w-[120px] h-[40px] flex justify-center grid content-center rounded-xl bg-[#171f3e]"
+          class="w-full md:w-[120px] h-[40px] flex justify-center grid content-center rounded-xl bg-[#171f3e] border-2 hover:bg-transparent border-transparent hover:border-[#00c9b2] duration-300 ease-in-out"
           target="_blank"
           href="https://mail.google.com/mail/u/0/?fs=1&to=chotiwut11@gmail.com&su=SUBJECT&body=BODY&tf=cm"
         >
@@ -44,7 +44,7 @@
       </div>
     </div>
     <div
-      class="index__skill mb-8 p-8 w-full md:h-[260px] h-[320px] bg-[#171f3e] border-2 border-[#2677eb] rounded-3xl flex flex-col"
+      class="index__skill mb-8 p-8 w-full md:h-[260px] h-[320px] bg-[#171f3e] border-2 border-[#00c9b2] rounded-3xl flex flex-col"
     >
       <p class="text-center text-2xl">Skills</p>
       <div class="md:flex md:justify-between my-auto grid grid-cols-4 gap-4">
@@ -74,13 +74,13 @@
         <p class="text-xs">{{ item.time }}</p>
       </div>
     </div>
-    <div class="index__project">
+    <div class="index__project px-8">
       <p class="text-center text-2xl my-8">Project</p>
-      <div class="grid grid-cols-2 gap-8">
-        <a class="bg-[#1f1f1f] w-[100%] max-h-[200px] rounded-xl p-3 overflow-auto cursor-pointer" v-for="(asd) in myProject" :key="key" :href="asd.link" target="_blank">
-          <p class="text-[20px] text-extrabold">{{ asd.title }}</p>
-          <p class="text-[14px]">{{ asd.desc }}</p>
-          <p class="text-[12px] opacity-70">{{ asd.time }}</p>
+      <div class="grid grid-cols-1 gap-10">
+        <a class="bg-[#1f1f1f] w-[100%] max-h-[200px] rounded-xl p-3 overflow-auto cursor-pointer border-2 border-transparent hover:border-slate-400 duration-300 ease-in-out" v-for="(project) in myProject" :key="key" :href="project.link" target="_blank">
+          <p class="text-[20px] text-extrabold mb-2">{{ project.title }}</p>
+          <p class="text-[12px] opacity-70 mb-6">{{ project.time }}</p>
+          <p class="text-[16px]">{{ project.desc }}</p>
         </a>
         <!-- <div
           class="project--1 bg-[#1f1f1f] w-[100%] h-[120px] rounded-xl p-3"
@@ -112,7 +112,7 @@
         </div> -->
       </div>
     </div>
-    <div class="index__project--modal">
+    <!-- <div class="index__project--modal">
       <div
         class="project--1 project fixed top-[50%] left-[50%] bg-[#fff] text-[#000000] w-[75%] h-[75%] p-8 rounded-3xl flex flex-col justify-between"
         v-if="project1"
@@ -155,7 +155,7 @@
         <p @click="project4 = !project4">wow</p>
         <p>press 1st text for closing the tab</p>
       </div>
-    </div>
+    </div> -->
     <!-- <div>
       <button
         v-for="(project, index) in projects"
@@ -198,6 +198,12 @@
   -webkit-backdrop-filter: blur(0px);
   border-radius: 60px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.Hglass{
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
 }
 .bounce:hover {
   animation: bounce 1s infinite alternate;
@@ -242,44 +248,44 @@ const myProject = ref([
   {
     title: "Jejak Kuliner Nusantara Presiden Soekarno | Tutur Visual by Kompas",
     link: "https://interaktif.kompas.id/baca/masakan-nusantara-kemerdekaan/",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of typeand scrambled it to make a type specimen book.",
-    time: "August",
+    desc: "To commemorate Indonesia's anniversary, a Tutur Visual Jejak Kuliner Nusantara Presiden Soekarno was created . In this project I developed several component using vue.js and Sass (Catalog component, Recipe Complete component and CreditandRecommender component).",
+    time: "August 2023",
   },
   {
     title: "Seberapa Besar Pekerjaan Anda Terpapar Kecerdasan Artifisial | Tutur Visual by Kompas",
     link: "https://interaktif.kompas.id/baca/kecerdasan-buatan-industri-kerja-dan-profesi/",
-    desc: "",
-    time: "June",
+    desc: "In order to commemorate Kompas's anniversary with the theme of artificial intelligence, an Seberapa Besar Pekerjaan Anda Terpapar Kecerdasan Artifisial project was created. In this project I developed several component using vue.js and Sass (Catalog component and content component).",
+    time: "June 2023",
   },
   {
     title: "Penantian Abadi Para Tahanan PBB | Tutur Visual by Kompas",
     link: "https://interaktif.kompas.id/baca/kisah-keluarga-imigran-tahanan-pbb/",
-    desc: "",
-    time: "Mei",
+    desc: "Penantian Abadi Para Tahanan PBB is a project created to visualize stories. In this project I developed several component using vue.js and Sass (Opening section, content component and animation, and CreditandRecommender component).",
+    time: "Mei 2023",
   },
   {
     title: "Apa yang Anda Lakukan Saat Terjadi Gempa? | Tutur Visual by Kompas",
     link: "https://interaktif.kompas.id/baca/siap-siaga-hadapi-bencana-gempa/",
-    desc: "",
-    time: "April",
+    desc: "Apa yang Anda Lakukan Saat Terjadi Gempa? is a project created to commemorate Disaster Preparedness Day. In this project I developed several component using vue.js and Sass (Home simulation, Mainmenu component, Finish Scene component, and Recommender component).",
+    time: "April 2023",
   },
   {
     title: "Yuk, Mengenal Permainan Tradisional Lewat Gim Berikut Ini | Tutur Visual by Kompas",
     link: "https://interaktif.kompas.id/baca/permainan-populer-anak-indonesia/",
-    desc: "",
-    time: "March",
+    desc: "Yuk, Mengenal Permainan Tradisional Lewat Gim Berikut Ini is a project created increase people awareness of traditional Indonesian games. In this project I developed a game and several component using vue.js, phaser, and Sass (Marble Game, TotalScore component, and Recommender component).",
+    time: "March 2023",
   },
   {
     title: "Pilih Jagoanmu pada Pesta Bola Qatar | Tutur Visual by Kompas",
     link: "https://interaktif.kompas.id/baca/prediksi-jagoan-pesta-bola-qatar/",
-    desc: "",
-    time: "November",
+    desc: "Pilih Jagoanmu pada Pesta Bola Qatar is a project created to enliven the Qatar World Cup. In this project I developed several component using vue.js and Sass. (Header, Banner section, Golden Choice component,  and Recommender Section).",
+    time: "November 2022",
   },
   {
     title: "Menjelajah Jawa-Bali dengan Mobil Listrik | Tutur Visual by Kompas",
     link: "https://interaktif.kompas.id/baca/liburan-mobil-listrik-jakarta-bali/",
-    desc: "",
-    time: "October",
+    desc: "Menjelajah Jawa-Bali dengan Mobil Listrik is a project to increase people awareness of using electric vechicle. In this project I developed several component using vue.js and Sass (Opening section, Credit component, Share component and Recommender component).",
+    time: "October 2022",
   },
 ])
 
