@@ -43,7 +43,7 @@
         >
       </div>
     </div>
-    <!-- <div
+    <div
       class="index__skill mb-8 p-8 w-full md:h-[260px] h-[320px] bg-[#171f3e] border-2 border-[#00c9b2] rounded-3xl flex flex-col"
     >
       <p class="text-center text-2xl">Skills</p>
@@ -65,7 +65,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <div class="index__experience mb-8 p-2 w-full grid gap-10">
       <p class="text-center text-2xl">Experience</p>
       <div class="index__experience-1" v-for="item in Experience" key="index">
@@ -305,35 +305,35 @@ const Experience = ref([
 const skills = ref([
   {
     skill: "HTML",
-    img: "../public/HTML.png",
+    img: "/HTML.png",
   },
   {
     skill: "CSS",
-    img: "../public/CSS.png",
+    img: "/CSS.png",
   },
   {
     skill: "JavaScript",
-    img: "../public/JS.png",
+    img: "/JS.png",
   },
   {
     skill: "Sass",
-    img: "../public/Sass.png",
+    img: "/Sass.png",
   },
   {
     skill: "Tailwind",
-    img: "../public/tailwind.webp",
+    img: "/tailwind.webp",
   },
   {
     skill: "Bootstrap",
-    img: "../public/Bootstrap.png",
+    img: "/Bootstrap.png",
   },
   {
     skill: "Vue.js",
-    img: "../public/Vue.png",
+    img: "/Vue.png",
   },
   {
     skill: "Nuxt.js",
-    img: "../public/Nuxt.png",
+    img: "/Nuxt.png",
   },
 ]);
 </script>
