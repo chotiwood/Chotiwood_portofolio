@@ -57,12 +57,12 @@
           <p class="text-center text-[11px] md:text-[16px] duration-300">
             {{ item.skill }}
           </p>
-          <div class="w-full h-[10px] bg-[#1f1f1f] rounded-md">
+          <!-- <div class="w-full h-[10px] bg-[#1f1f1f] rounded-md">
             <div
               class="h-[10px] bg-[#fff] rounded-md"
               :style="{ width: item.percentage + '%' }"
             ></div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -317,7 +317,7 @@ const skills = ref([
   },
   {
     skill: "Sass",
-    img: "/Sass.png",
+    img: "/sass.png",
   },
   {
     skill: "Tailwind",
