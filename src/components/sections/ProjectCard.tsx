@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { Card } from '../ui/Card';
-import { Button } from '../ui/Button';
+import { Card } from "../ui/Card";
+import { Button } from "../ui/Button";
 
 interface ProjectCardProps {
   title: string;
@@ -20,7 +20,7 @@ export function ProjectCard({
   image,
   link,
   onMouseEnter,
-  onMouseLeave
+  onMouseLeave,
 }: ProjectCardProps) {
   return (
     <Card
@@ -47,11 +47,7 @@ export function ProjectCard({
             </span>
           ))}
         </div>
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href={link} target="_blank" rel="noopener noreferrer">
           <Button variant="primary" className="w-full">
             View Project
           </Button>
