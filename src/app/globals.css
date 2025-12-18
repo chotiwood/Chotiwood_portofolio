@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0f0f0f;
+    --primary: #0066ff;
+    --primary-foreground: #ffffff;
+    --secondary: #f4f4f5;
+    --secondary-foreground: #0f0f0f;
+    --muted: #71717a;
+    --accent: #18181b;
+    --card: #ffffff;
+    --card-foreground: #0f0f0f;
+    --border: #e4e4e7;
+  }
+
+  .dark {
+    --background: #09090b;
+    --foreground: #fafafa;
+    --primary: #0066ff;
+    --primary-foreground: #fafafa;
+    --secondary: #27272a;
+    --secondary-foreground: #fafafa;
+    --muted: #a1a1aa;
+    --accent: #fafafa;
+    --card: #18181b;
+    --card-foreground: #fafafa;
+    --border: #27272a;
+  }
+
+  body {
+    @apply text-foreground bg-background;
+    font-family: 'Inter', -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .hover-link {
+    @apply relative inline-block;
+  }
+
+  .hover-link::after {
+    content: '';
+    @apply absolute w-full h-px -bottom-0.5 left-0 bg-current transform scale-x-0 origin-right transition-transform duration-300;
+  }
+
+  .hover-link:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 8px 4px rgba(255, 255, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+}
