@@ -70,7 +70,7 @@ export default function ContactPage() {
                 <span>chotiwut11@gmail.com</span>
               </a>
 
-              <a
+              {/* <a
                 href="https://github.com/chotiwood"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -88,7 +88,7 @@ export default function ContactPage() {
                   />
                 </svg>
                 <span>GitHub</span>
-              </a>
+              </a> */}
 
               <a
                 href="https://www.linkedin.com/in/chotiwut-74a335184/"
