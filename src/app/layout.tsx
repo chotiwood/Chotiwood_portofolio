@@ -7,8 +7,13 @@ import { ThemeProvider } from "../components/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Your Name - Frontend & UI Engineer",
+  title: "Chotiwut - Frontend & UI Engineer",
   description: "Portfolio of a Frontend & UI Engineer",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
